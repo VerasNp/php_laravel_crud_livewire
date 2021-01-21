@@ -14,7 +14,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        return view('book.index');
     }
 
     /**
@@ -24,19 +24,20 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('book.create');
     }
 
     /**
+     * PS.: In this project it'll be used livewire to assist some actions. This method will not be used * so
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -46,7 +47,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view('book.show');
     }
 
     /**
@@ -57,29 +58,31 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        return view('book.edit');
     }
 
     /**
+     * PS.: In this project it'll be used livewire to assist some actions. This method will not be used * so
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
-    {
-        //
-    }
+    // public function update(Request $request, Book $book)
+    // {
+    //     //
+    // }
 
     /**
+     * PS.: In this project it'll be used livewire to assist some actions. This method will not be used * so
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
-    {
-        //
-    }
+    // public function destroy(Book $book)
+    // {
+    //     //
+    // }
 }
