@@ -23,6 +23,7 @@
                 </thead>
                 <tbody class="bg-white">
                     @forelse($books as $book)
+                    <!-- Its necessary to use an key when using livewire (Like Vue.js does) to avoid errors -->
                     <tr wire:key="{{ $book->id }}">
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                             {{ $book->id }}
@@ -51,7 +52,7 @@
                     @empty
                     <tr>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                            Nenhum item encontrado ...
+                            Nothing here srry :( ...
                         </td>
                     </tr>
                     @endforelse

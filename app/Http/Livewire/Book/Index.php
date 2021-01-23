@@ -8,6 +8,9 @@ use App\Models\Book;
 
 class Index extends Component
 {
+    /**
+     * The advantage is that with this trait the window do not need to be reloaded.
+     */
     use WithPagination;
     public function render()
     {
