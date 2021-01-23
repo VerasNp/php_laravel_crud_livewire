@@ -29,8 +29,30 @@ class Create extends Component
         $this->book = new Book();
     }
 
+    /**
+     * Make validation in real time
+     */
+    // public function updated($field)
+    // {
+    //     if ($field == "book.name") {
+    //         $this->validate();
+    //     }
+    // }
+
+    /**
+     * Make validation in real time to each input
+     */
+    // public function updatedBookName()
+    // {
+    //     $this->validade();
+    // }
+
     public function save()
     {
+        /**
+         * Check the property $rules
+         */
+        $this->validate();
         Book::create($this->book->toArray());
         return redirect()->route('books.index');
     }
