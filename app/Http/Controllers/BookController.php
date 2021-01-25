@@ -67,7 +67,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view('book.edit');
+        return view('book.edit', ['book' => $book]);
     }
 
     /**
