@@ -54,6 +54,10 @@ class Create extends Component
          */
         $this->validate();
         Book::create($this->book->toArray());
+        /**
+         * These flash message will be available only on this request
+         */
+        session()->flash('message', 'Created with success!');
         return redirect()->route('books.index');
     }
 

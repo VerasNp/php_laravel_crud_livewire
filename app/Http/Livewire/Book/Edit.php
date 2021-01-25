@@ -27,6 +27,10 @@ class Edit extends Component
          */
         $this->validate();
         $this->book->update($this->book->toArray());
+        /**
+         * These flash message will be available only on this request
+         */
+        session()->flash('message', 'Updated with success!');
         return redirect()->route('books.index');
     }
 
