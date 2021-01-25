@@ -52,7 +52,7 @@
                             <a href="{{ route('books.show', ['book' => $book->id]) }}" class="">
                                 Ver
                             </a>
-                            <button wire:click="deleteBook('{{ $book->id }}')" onclick="return confirm('Deseja remove o livro {{ $book->name }}') || event.stopImmediatePropagation()">
+                            <button wire:click="deleteBook('{{ $book->id }}')" onclick="return confirm('Do you really want to remove the book {{ $book->name }}') || event.stopImmediatePropagation()">
                                 Apagar
                                 </<button>
                         </td>
